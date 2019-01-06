@@ -7,6 +7,8 @@
 #include "TankAimingComponent.h"
 #include "Tank.generated.h" // Put new includes above
 
+class UTanKBarrel;
+
 UCLASS()
 class BATTLETANK_API ATank : public APawn
 {
@@ -27,7 +29,7 @@ public:
 	void AimAt(FVector OutHitLocation);
 
 	UFUNCTION(BlueprintCallable, Category = Setup)
-	void SetBarrelReference(UStaticMeshComponent* BarrelToSet);
+	void SetBarrelReference(UTanKBarrel* BarrelToSet);
 private:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
