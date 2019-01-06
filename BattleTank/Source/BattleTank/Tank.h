@@ -19,8 +19,6 @@ public:
 	ATank();
 
 	virtual void BeginPlay() override;
-	virtual void Tick(float DeltaTime) override;
-
 
 protected:
 	UTankAimingComponent* TankAimingComponent = nullptr;
