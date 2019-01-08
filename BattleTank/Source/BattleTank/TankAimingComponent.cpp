@@ -4,6 +4,7 @@
 #include "Tank.h"
 #include "Classes/Engine/StaticMesh.h"
 #include "TanKBarrel.h"
+#include "TankTurret.h"
 #include "Classes/Kismet/GameplayStatics.h"
 // Sets default values for this component's properties
 UTankAimingComponent::UTankAimingComponent()
@@ -17,7 +18,14 @@ UTankAimingComponent::UTankAimingComponent()
 
 void UTankAimingComponent::SetBarrelReference(UTanKBarrel* BarrelToSet)
 {
+	if (!BarrelToSet) { return; }
 	Barrel = BarrelToSet;
+}
+
+void UTankAimingComponent::SetTurretReference(UTankTurret* TurretToSet)
+{
+	if (!TurretToSet) { return; }
+	Turret = TurretToSet;
 }
 
 
