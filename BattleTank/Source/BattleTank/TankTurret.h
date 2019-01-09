@@ -7,7 +7,7 @@
 #include "TankTurret.generated.h"
 
 /**
- * 
+ * Tank Turret is used to Rotate the Barrel of the Tank in a 360Degrees rotation
  */
 UCLASS(meta = (BluePrintSpawnableComponent))
 class BATTLETANK_API UTankTurret : public UStaticMeshComponent
