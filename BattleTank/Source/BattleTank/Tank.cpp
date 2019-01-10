@@ -5,7 +5,6 @@
 #include "Classes/Engine/World.h"
 #include "Projectile.h"
 #include "TanKBarrel.h"
-#include "TankMovementComponent.h"
 // Sets default values
 ATank::ATank()
 {
