@@ -14,6 +14,11 @@ ATank::ATank()
 
 }
 
+void ATank::BeginPlay()
+{
+	Super::BeginPlay; // needed for BP Begin play!!!!!
+
+}
 
 void ATank::AimAt(FVector OutHitLocation)
 {
