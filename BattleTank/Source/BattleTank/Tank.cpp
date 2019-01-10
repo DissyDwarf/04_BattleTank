@@ -16,7 +16,7 @@ ATank::ATank()
 
 void ATank::BeginPlay()
 {
-	Super::BeginPlay; // needed for BP Begin play!!!!!
+	Super::BeginPlay(); // needed for BP Begin play!!!!!
 
 }
 
