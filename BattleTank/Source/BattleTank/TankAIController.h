@@ -6,8 +6,7 @@
 #include "AIController.h"
 #include "TankAIController.generated.h"
 
-// Foward Declerations
-class ATank;
+
 
 
 UCLASS()

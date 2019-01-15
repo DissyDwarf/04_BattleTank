@@ -10,7 +10,6 @@
 
 class UTanKBarrel;
 class UTankTurret;
-class UTankAimingComponent;
 class AProjectile;
 
 UCLASS()
@@ -23,13 +22,8 @@ public:
 	ATank();
 
 	virtual void BeginPlay() override;
-
-protected:
-	UPROPERTY(BlueprintReadOnly)
-	UTankAimingComponent* TankAimingComponent = nullptr;
 	
 public:	
-	void AimAt(FVector OutHitLocation);
 
 	UFUNCTION(BlueprintCallable)
 	void Fire();
