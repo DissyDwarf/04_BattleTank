@@ -20,7 +20,7 @@ void ATankAIController::Tick(float DeltaTime)
 
 	Super::Tick(DeltaTime);
 	if (!ensure(PlayerTank && ControlledTank)) { return; }
-	 
+	
 	// move towards the player
 	MoveToActor(PlayerTank, AcceptanceRadius);
 
@@ -28,8 +28,7 @@ void ATankAIController::Tick(float DeltaTime)
 	auto AimingComponent = ControlledTank->FindComponentByClass<UTankAimingComponent>();
 	AimingComponent->AimAt(PlayerTank->GetActorLocation());
 
-	//TODO Fix Firing
-	//ControlledTank->Fire(); //TODO dont fire every frame
+	AimingComponent->Fire(); //TODO dont fire every frame
 	
 
 }
