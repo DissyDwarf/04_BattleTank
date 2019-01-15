@@ -17,6 +17,7 @@ void ATank::BeginPlay()
 {
 	Super::BeginPlay(); // needed for BP Begin play!!!!!
 
+	TankAimingComponent = FindComponentByClass<UTankAimingComponent>();
 }
 
 void ATank::AimAt(FVector OutHitLocation)

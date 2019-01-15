@@ -25,8 +25,9 @@ public:
 	virtual void BeginPlay() override;
 
 protected:
-
-
+	UPROPERTY(BlueprintReadOnly)
+	UTankAimingComponent* TankAimingComponent = nullptr;
+	
 public:	
 	void AimAt(FVector OutHitLocation);
 
@@ -34,10 +35,13 @@ public:
 	void Fire();
 
 private:
+	//TODO remove once firing is moved to aiming component
 	UPROPERTY(EditDefaultsOnly, Category = Firing)
 	float LaunchSpeed = 4000; 
+
 	UPROPERTY(EditDefaultsOnly, Category = Setup)
 	TSubclassOf<AProjectile> ProjectileBlueprint;
+
 	UPROPERTY(EditDefaultsOnly, Category = Firing)
 	float ReloadTimeInSeconds = 3;
 
