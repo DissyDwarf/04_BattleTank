@@ -56,6 +56,8 @@ private:
 	float LaunchSpeed = 4000;
 
 	void MoveBarrelTowards(FVector AimDirection);
+	
+	bool IsBarrelMoving();
 
 	UPROPERTY(EditDefaultsOnly, Category = Setup)
 	TSubclassOf<AProjectile> ProjectileBlueprint;
@@ -64,5 +66,7 @@ private:
 	float ReloadTimeInSeconds = 3;
 
 	double LastFireTime = 0;
+	
+	FVector AimDirection;
 };
 
