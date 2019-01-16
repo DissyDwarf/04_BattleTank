@@ -44,6 +44,12 @@ void UTankAimingComponent::Initialise(UTanKBarrel* BarrelToSet, UTankTurret* Tur
 
  }
 
+ EFiringStatus UTankAimingComponent::GetFiringState() const
+ {
+	 return FiringState;
+ }
+
+
  bool UTankAimingComponent::IsBarrelMoving()
  {
 	 if (!ensure(Barrel)) { return false;}
@@ -120,3 +126,4 @@ void UTankAimingComponent::Fire()
 		LastFireTime = FPlatformTime::Seconds();
 	}
 }
+
