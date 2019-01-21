@@ -27,7 +27,14 @@ protected:
 	void FoundAimingComponent(UTankAimingComponent* AimCompRef);
 
 public:
+
+	UFUNCTION()
+	void OnPossessedTankDeath();
+
+	void SetPawn(APawn * InPawn);
+
 	void BeginPlay() override;
+
 	virtual void Tick(float DeltaTime) override;
 
 private:
